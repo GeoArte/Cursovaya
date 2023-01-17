@@ -96,6 +96,7 @@ public class EmployeeBook
                 System.out.println("Сотрудник №" + (i+1) + ":\n" + this.employees[i].getName());
             }
         }
+        System.out.println();
     }
     public void indexZp(int pr)
     {
@@ -106,6 +107,7 @@ public class EmployeeBook
                 this.employees[i].setZp(this.employees[i].getZp()+((this.employees[i].getZp()*pr)/100));
             }
         }
+        System.out.println("Зарплата изменена\n");
     }
     public EmployeeBook employeesLessZp(int zp)
     {
@@ -256,6 +258,7 @@ public class EmployeeBook
                 }
             }
         }
+        System.out.println("Зарплата в отделе изменена\n");
     }
     public void printEmployeeDepartment (int department)
     {
@@ -338,7 +341,7 @@ public class EmployeeBook
             System.out.println("Такого сотрудника нет");
         }
     }
-    public void changeEmployee(String name, int department, int zp) //Что бы не менять департамент или зарплату надо ввести -1
+    public void changeEmployee(String name, int department, int zp)
     {
         boolean breakCheck = false;
         for (int i = 0; i < this.size; i ++)
